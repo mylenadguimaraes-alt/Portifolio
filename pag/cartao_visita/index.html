@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mylena Dantas Guimarães | Cartão de Visitas</title>
+
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #f2eafa;
+            font-family: Georgia, sans-serif;
+        }
+
+        /* Cartão de visitas */
+        #cartao {
+            width: 420px;
+            padding: 35px;
+
+            background: white;
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+            margin: 30px;
+        }
+
+        /* Foto */
+        #foto {
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: 4px solid #9b59b6;
+
+            margin-bottom: 15px;
+        }
+
+        /* Nome */
+        h1 {
+            color: #6c3483;
+
+            margin: 0 0 5px 0;
+
+            font-family: Georgia, sans-serif;
+        }
+
+        /* Profissão */
+        #profissao {
+            color: #777;
+
+            font-size: 16px;
+
+            margin: 0 0 20px 0;
+
+            font-family: Georgia, sans-serif;
+        }
+
+        /* Linha decorativa */
+        .linha {
+            width: 60px;
+            height: 3px;
+
+            background: #9b59b6;
+
+            margin: 0 auto 20px;
+        }
+
+        /* Informações */
+        #informacoes {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        #informacoes p {
+            margin: 10px 0;
+            color: #444;
+        }
+
+        #informacoes strong {
+            color: #6c3483;
+        }
+
+        /* Área do projeto */
+        #atividade {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        #atividade h2 {
+            color: #6c3483;
+
+            font-size: 18px;
+
+            margin: 0 0 10px 0;
+        }
+
+        #atividade h3 {
+            color: #444;
+
+            font-size: 16px;
+
+            margin: 0 0 8px 0;
+        }
+
+        #atividade p {
+            color: #666;
+
+            text-align: justify;
+
+            font-size: 14px;
+            line-height: 1.5;
+
+            margin: 0 0 12px 0;
+        }
+
+        #atividade a {
+            color: #9b59b6;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        #atividade a:hover{
+            text-decoration: revert;
+        }
+
+        /* Redes sociais */
+        #redes {
+            margin-top: 25px;
+
+            display: flex;
+
+            justify-content: flex-start;
+
+            gap: 20px;
+        }
+
+        #redes a {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+        }
+
+        #redes img {
+            width: 35px;
+            height: 35px;
+
+            object-fit: contain;
+        }
+
+        #redes img:hover{
+            transform: scale(1.5);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Cartão de visitas -->
+    <div id="cartao">
+
+        <!-- Foto da pessoa -->
+        <img
+            src="img/foto.jpeg"
+            alt="Foto de Mylena"
+            id="foto"
+        >
+
+        <!-- Nome -->
+        <h1>
+            Mylena Dantas Guimarães
+        </h1>
+
+        <!-- Atividade profissional ou estudantil -->
+        <p id="profissao">
+            Estudante de Análise e Desenvolvimento de Sistemas
+        </p>
+
+        <!-- Linha decorativa -->
+        <div class="linha"></div>
+
+        <!-- Área com as informações de contato -->
+        <div id="informacoes">
+
+            <!-- Endereço -->
+            <p>
+                <strong>
+                    Endereço:
+                </strong>
+                Inhaúma - Rio de Janeiro / RJ
+            </p>
+
+            <!-- Telefone -->
+            <p>
+                <strong>
+                    Telefone:
+                </strong>
+                (21) 99669-5345
+            </p>
+
+            <!-- E-mail -->
+            <p>
+                <strong>
+                    E-mail:
+                </strong>
+                mylenadguimaraes@gmail.com
+            </p>
+
+        </div>
+
+        <!-- Área do projeto -->
+        <div id="atividade">
+
+            <h2>
+                Projeto em destaque
+            </h2>
+
+            <h3>
+                Análise de Cancelamentos de Clientes
+            </h3>
+
+            <p>
+                Projeto desenvolvido em Python para analisar dados de clientes,
+                identificar fatores relacionados ao cancelamento e gerar
+                visualizações para auxiliar na tomada de decisões.
+            </p>
+
+            <!-- Link para o projeto no GitHub -->
+            <a
+                href="https://github.com/mylenadguimaraes-alt/Python_Analise_Cancelamentos.git"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Ver projeto no GitHub
+            </a>
+
+        </div>
+
+        <!-- Redes sociais -->
+        <div id="redes">
+
+            <!-- GitHub -->
+            <a
+                href="https://github.com/mylenadguimaraes-alt"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="img/github_icon.png"
+                    alt="GitHub"
+                >
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+                href="https://www.linkedin.com/in/mylenag/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="img/linkedin_icon.png"
+                    alt="LinkedIn"
+                >
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
