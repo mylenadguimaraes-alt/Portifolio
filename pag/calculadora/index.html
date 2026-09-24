@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+</head>
+
+<body>
+
+    <section class="introducao">
+
+        <h1>Calculadora</h1>
+
+        <p>
+            Utilize a calculadora abaixo para realizar operações matemáticas
+            de forma simples e rápida. Informe dois números e escolha uma das
+            operações disponíveis: soma, subtração, multiplicação ou divisão.
+            O resultado será apresentado automaticamente após selecionar a operação.
+        </p>
+
+    </section>
+
+    <form>
+
+        <fieldset>
+
+            
+
+            <div class="numeros">
+
+                <div class="campos">
+
+                    <label for="numero1">Primeiro número</label>
+
+                    <input type="number" id="numero1">
+
+                </div>
+
+                <div class="campos">
+
+                    <label for="numero2">Segundo número</label>
+
+                    <input type="number" id="numero2">
+
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <input type="button" value="Soma" id="soma" onclick="fSoma()">
+
+                <input type="button" value="Subtração" id="subtracao" onclick="fSubtracao()">
+
+                <input type="button" value="Multiplicação" id="multiplicacao" onclick="fMultiplicacao()">
+
+                <input type="button" value="Divisão" id="divisao" onclick="fDivisao()">
+
+            </div>
+
+            <div class="limpar">
+
+                <input type="button" value="Limpar" id="limpar" onclick="fLimpar()">
+
+            </div>
+
+            <div class="resultado">
+
+                <p>Resultado: <span id="resultado">0</span></p>
+
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
