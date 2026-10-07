@@ -24,7 +24,6 @@ body{
 }
 
 
-/* INTRODUÇÃO */
 
 .introducao{
     width: min(100%, 600px);
@@ -124,7 +123,6 @@ fieldset{
 }
 
 
-/* BOTÕES */
 
 .botoes{
     display: grid;
