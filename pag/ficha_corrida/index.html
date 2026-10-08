@@ -21,7 +21,7 @@
         </header>
 
 
-        <form action="">
+        <form action="php/php.php" method="post">
             <fieldset>
 
                 <legend>Ficha de corrida</legend>
@@ -30,12 +30,12 @@
                     
                     <div class="campos">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome"> 
+                        <input type="text" id="nome" name="nome" required> 
                     </div>
                 
                     <div class="campos">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" id="sobrenome" name="sobrenome">
+                        <input type="text" id="sobrenome" name="sobrenome" required>
                     </div>
                
                 </div>
@@ -44,23 +44,23 @@
 
                     <div class="campos">
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf">
+                        <input type="text" id="cpf" name="cpf" required>
                     </div>
 
                     <div class="campos">
                         <label for="telefone">Telefone</label>
-                        <input type="text" id="telefone" name="telefone">
+                        <input type="text" id="telefone" name="telefone" required>
                     </div>
 
                     <div class="campos">
                         <label for="idade">Idade</label>
-                        <input type="text" id="idade" name="idade">
+                        <input type="number" id="idade" name="idade" required>
                     </div>
 
                     <div class="campos">
                         
                         <label for="email">E-mail</label>
-                        <input type="text" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
 
                     </div>
 
@@ -116,18 +116,18 @@
                     <label class="titulo">Você deseja: </label>
                     
                     <div class="opcoes">
-                        <input type="checkbox" value="Camiseta" id="camiseta" name="itens">
+                        <input type="checkbox" value="Camiseta" id="camiseta" name="itens[]">
                         <label for="camiseta">Desejo uma camiseta.</label>
                     </div>
                     
                     <div class="opcoes">
-                        <input type="checkbox" value="Medalha" id="medalha" name="itens">
+                        <input type="checkbox" value="Medalha" id="medalha" name="itens[]">
                         <label for="medalha">Desejo uma medalha.</label>
                     </div>
 
                     <div class="opcoes">
-                        <input type="checkbox" value="Banana" id="banana" name="itens">
-                        <label for="banana">Desejo uma banana.</label>
+                        <input type="checkbox" value="Bandana" id="bandana" name="itens[]">
+                        <label for="bandana">Desejo uma bandana.</label>
                     </div>
 
                 </div>
@@ -138,6 +138,7 @@
 
             </fieldset>
         </form>
+        <script src="js/script.js"></script>
     </body>
 
 </html>

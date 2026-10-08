@@ -10,7 +10,7 @@ body {
     background-color: #c3e1ff;
 }
 
-/* CABEÇALHO */
+
 
 header {
     padding: 20px 30px;
@@ -31,7 +31,7 @@ header p span {
     border-bottom: 2px solid #00568b;
 }
 
-/* FORMULÁRIO */
+
 
 form {
     width: calc(100% - 60px);
@@ -53,7 +53,7 @@ fieldset {
     border-radius: 10px;
 }
 
-/* TÍTULO DO FORMULÁRIO */
+
 
 fieldset legend {
     font-size: 28px;
@@ -68,7 +68,6 @@ fieldset legend {
     color: #00568b;
 }
 
-/* CAMPOS */
 
 .dados {
     display: flex;
@@ -92,7 +91,9 @@ fieldset legend {
     cursor: pointer;
 }
 
-.campos input[type="text"] {
+.campos input[type="text"], 
+input[type="number"], 
+input[type="email"] {
     width: 100%;
     padding: 10px;
 
@@ -101,11 +102,12 @@ fieldset legend {
     outline: none;
 }
 
-.campos input[type="text"]:focus {
+.campos input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus {
     border-color: #009eff;
 }
 
-/* OPÇÕES */
 
 .conteudo_separado {
     padding-top: 15px;
@@ -134,7 +136,6 @@ fieldset legend {
     cursor: pointer;
 }
 
-/* BOTÃO */
 
 #botao {
     padding-top: 20px;
@@ -165,8 +166,6 @@ fieldset legend {
     transform: scale(0.95);
 }
 
-
-/* CELULAR */
 
 @media (max-width: 600px) {
 
