@@ -1,25 +1,26 @@
 # Portfólio - Mylena Dantas Guimarães
 
-Portfólio pessoal desenvolvido utilizando HTML, CSS e JavaScript. O projeto reúne diferentes atividades e projetos desenvolvidos durante a formação em Análise e Desenvolvimento de Sistemas.
+Portfólio pessoal desenvolvido com HTML, CSS, JavaScript e PHP. O projeto reúne diferentes atividades e projetos desenvolvidos durante a formação em Análise e Desenvolvimento de Sistemas.
 
-O portfólio possui uma página principal que permite navegar entre diferentes projetos através de um menu lateral. Os conteúdos são exibidos em uma área utilizando `iframe`.
+O portfólio possui uma página principal que permite navegar entre diferentes projetos através de um menu lateral. Os conteúdos são exibidos de forma fluida em uma área central utilizando `iframe`.
 
-## Sobre o projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido com o objetivo de apresentar trabalhos, atividades e conhecimentos adquiridos durante os estudos na área de tecnologia.
 
-A página principal apresenta os projetos disponíveis e permite acessá-los individualmente.
+A aplicação reúne desde páginas institucionais simples até formulários dinâmicos com processamento no servidor e sistemas de autenticação com persistência em Banco de Dados MySQL.
 
-## Tecnologias utilizadas
+## Tecnologias Utilizadas
 
-* HTML5
-* CSS3
-* JavaScript
+* **Front-end:** HTML5, CSS3, JavaScript (ES6+)
+* **Back-end:** PHP 8+
+* **Banco de Dados:** MySQL
+* **Arquitetura/Outros:** Leitura de variáveis de ambiente (`.env`), Sessões PHP (`session_start`), Navegação por `iframe`, Design Responsivo.
 
-## Estrutura do projeto
+## Estrutura do Projeto
 
 ```text
-Portifolio-master/
+Portifolio/
 │
 ├── css/
 │   └── style.css
@@ -30,7 +31,6 @@ Portifolio-master/
 ├── index.html
 │
 └── pag/
-    │
     ├── calculadora/
     │   ├── css/
     │   │   └── style.css
@@ -55,19 +55,37 @@ Portifolio-master/
     │
     ├── curriculo/
     │   ├── css/
+    │   │   └── style.css
     │   ├── img/
     │   └── index.html
     │
     ├── ficha_corrida/
     │   ├── css/
+    │   │   └── style.css
     │   ├── img/
+    │   │   └── logo.png
+    │   ├── js/
+    │   │   └── script.js
+    │   ├── php/
+    │   │   └── php.php
     │   └── index.html
     │
-    └── iframe/
-        └── index.html
+    ├── iframe/
+    │   └── index.html
+    │
+    └── login/
+        ├── database/
+        │   └── usuario.sql
+        ├── .env
+        ├── conexao.php
+        ├── index.php
+        ├── logout.php
+        ├── painel.php
+        ├── painel-estilo.css
+        └── style.css
 ```
 
-## Projetos
+## Projetos Integrados
 
 ### Cartão de Visitas
 
@@ -79,67 +97,69 @@ Página com uma versão digital do currículo, contendo informações sobre form
 
 ### Ficha de Corrida
 
-Formulário desenvolvido em HTML para simular uma ficha de inscrição em uma corrida.
-
-O formulário possui campos para:
-
-* Nome e sobrenome
-* CPF
-* Telefone
-* Idade
-* E-mail
-* Gênero
-* Distância da corrida
-* Itens adicionais, como camiseta, medalha e banana
+Formulário interativo desenvolvido em HTML e CSS para simular uma ficha de inscrição em uma corrida. Inclui script de processamento e envio via PHP (`php.php`).
 
 ### Calculadora
 
-Projeto desenvolvido em HTML, CSS e JavaScript para realizar operações matemáticas básicas.
+Projeto funcional em JavaScript para realizar operações matemáticas básicas (Soma, Subtração, Multiplicação e Divisão), além da opção de limpar dados.
 
-As operações disponíveis são:
+### Equação de Segundo Grau (Bhaskara)
 
-* Soma
-* Subtração
-* Multiplicação
-* Divisão
+Calculadora lógica em JavaScript para resolver equações do segundo grau utilizando a fórmula de Bhaskara. O script recebe os valores `a`, `b` e `c`, calcula o Delta e retorna as raízes reais.
 
-Também existe uma função para limpar os valores informados.
+### Sistema de Login e Cadastro (PHP / MySQL)
 
-### Equação de Segundo Grau
+Módulo de autenticação e gerenciamento de sessões com segurança e banco de dados MySQL:
 
-Calculadora desenvolvida em JavaScript para resolver equações de segundo grau utilizando a fórmula de Bhaskara.
+* **Telas Unificadas:** Formulários de Login e Cadastro na mesma página (`index.php`), alternados via parâmetros `GET`.
+* **Conexão Segura:** Arquivo `conexao.php` configurado para ler credenciais via variáveis de ambiente (`.env`) e criar a tabela `usuarios` automaticamente no banco MySQL se ela ainda não existir.
+* **Área Restrita:** Painel privado (`painel.php`) protegido por verificação de sessão (`session_start`), onde são exibidas as informações do usuário autenticado.
+* **Criptografia & Logout:** Senhas armazenadas com hash seguro (`password_hash`) e controle de encerramento de sessão via `logout.php`.
+* **UI/UX & Mobile:** Interface responsiva para celulares com paleta personalizada (`#322030`, `#725b75`, `#e3cebd`).
 
-O projeto permite informar os valores de `a`, `b` e `c` e calcular as raízes da equação a partir do valor de Delta.
+### Página Inicial
 
-### Página inicial
+Página padrão exibida no `iframe` ao carregar o portfólio, apresentando uma mensagem de boas-vindas ao visitante.
 
-O projeto também possui uma página inicial exibida no `iframe`, apresentando uma mensagem de boas-vindas e orientando o visitante a selecionar um projeto.
+## Como Executar
 
-## Como executar
+### Pré-requisitos
 
-Por ser um projeto desenvolvido com HTML, CSS e JavaScript, não é necessário instalar dependências ou configurar um servidor para executar a versão básica.
+* Navegador Web moderno.
+* Servidor Web local com suporte a PHP e MySQL (ex: XAMPP, WAMP, Laragon ou PHP Built-in Server).
 
-### Executando localmente
+### Passo a Passo
 
-1. Faça o download ou clone este repositório.
+1. **Clonar ou Baixar o Repositório:**
 
-2. Abra a pasta do projeto.
+   ```bash
+   git clone https://github.com/mylenadguimaraes-alt/Portifolio.git
+   ```
 
-3. Abra o arquivo:
+2. **Configurar o ambiente no XAMPP/Servidor Local:**
+   * Mova a pasta `Portifolio-master` para o diretório raiz do seu servidor local (ex: `C:\xampp\htdocs\`).
 
-```text
-index.html
-```
+3. **Configurar o Banco de Dados para o Módulo de Login:**
+   * Inicie os serviços do Apache e MySQL.
+   * Crie um Banco de Dados no MySQL (ex: `sisvet`).
+   * Crie/Ajuste o arquivo `.env` dentro da pasta `pag/login/` com as suas credenciais:
 
-4. O portfólio será aberto no navegador.
+     ```env
+     DB_HOST=localhost
+     DB_USER=root
+     DB_PASS=
+     DB_NAME=usuario
+     ```
 
-Para uma experiência mais adequada durante o desenvolvimento, também é possível utilizar uma extensão como o Live Server no Visual Studio Code.
+   * *(Opcional)* Importe o arquivo `pag/login/database/usuario.sql` no seu banco de dados ou deixe que o arquivo `conexao.php` crie a tabela automaticamente na primeira execução.
+
+4. **Acessar a Aplicação:**
+   * Abra o navegador e acesse:
+     `http://localhost/Portifolio/index.html`
 
 ## Objetivo
 
-O projeto tem como objetivo servir como portfólio acadêmico e pessoal, reunindo diferentes exercícios e aplicações desenvolvidas durante o aprendizado de desenvolvimento web.
-
-Além de apresentar os projetos, ele demonstra conhecimentos em estruturação de páginas HTML, estilização com CSS, criação de formulários e utilização de JavaScript para implementar funcionalidades.
+Servir como portfólio acadêmico e profissional, demonstrando a evolução técnica em Front-end e Back-end durante a formação em Análise e Desenvolvimento de Sistemas.
 
 ## Autora
 
@@ -149,4 +169,4 @@ Estudante de Análise e Desenvolvimento de Sistemas.
 
 ## Licença
 
-Este projeto foi desenvolvido para fins acadêmicos e de portfólio pessoal.
+Este projeto foi desenvolvido exclusivamente para fins acadêmicos e de portfólio pessoal.s
