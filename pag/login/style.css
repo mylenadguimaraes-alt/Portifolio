@@ -1,0 +1,136 @@
+﻿:root {
+    --cor-bg: #322030;
+    --cor-card: #e3cebd;
+    --cor-primaria: #725b75;
+    --cor-texto: #2b1d29;
+    --cor-branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-bg);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    background: var(--cor-card);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--cor-texto);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 5px;
+    color: var(--cor-branco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+    button:hover {
+        background-color: #5a475d;
+    }
+
+.mensagem {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alternar {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+    .alternar a {
+        color: var(--cor-primaria);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .alternar a:hover {
+            text-decoration: underline;
+        }
+
+/* Responsividade para celulares menores */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
